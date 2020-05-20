@@ -2,21 +2,31 @@
   height: 75px;
   background: #fff;
   align-items: center;
-  border-bottom: 3px solid #166936;
+  border-bottom: 3px solid #d3ccbd;
 }
 
 .nav-link {
   font-weight: 600;
+  transition: 300ms;
+}
+
+.nav-link:hover {
+  transition: 300ms;
+  color: #166936 !important; 
 }
 
 .nav-2 {
   // height: 84px;
-  background: #d3ccbd;
-  border-bottom: 3px solid #166936;
+  background: #e0e1e2;
+  border-bottom: 3px solid #d3ccbd;
 }
 
 .thomas-logo {
   margin: 12px;
-  height: 82px;
+  height: 62px;
   margin-left: auto;
+}
+
+a {
+  color: #166936;
 }
