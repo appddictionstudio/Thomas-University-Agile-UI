@@ -16,7 +16,7 @@ export class UpcomingCoursesComponent implements OnInit {
     {
       title: "Remote-SAFe",
       subtitle: "POPM 5.0",
-      date: "July 30 - July 31, 2020",
+      date: "August 13 - Agust 14, 2020",
       img: "../../assets/img/logos/popm-5.png",
       learnText: "SAFe is improving business outcomes for companies across the world. Delivering maximum business value amid digital disruption and getting the business results needed is what SAFe Product Owners and Product Managers do through effective Program Increment execution.",
       learnText2: "Learn the skillsets needed to guide the delivery of value in a Lean enterprise and the activities, tools, and mechanics used to manage backlogs and programs.",
