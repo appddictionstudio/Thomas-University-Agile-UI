@@ -14,22 +14,6 @@ export class CoursesBottomSectionComponent implements OnInit {
 
   courses = [
     {
-      title: "Remote-SAFe",
-      subtitle: "POPM 5.0",
-      date: "August 13 - August 14, 2020",
-      img: "../../assets/img/logos/popm-5.png",
-      learnText: "SAFe is improving business outcomes for companies across the world. Delivering maximum business value amid digital disruption and getting the business results needed is what SAFe Product Owners and Product Managers do through effective Program Increment execution.",
-      learnText2: "Learn the skillsets needed to guide the delivery of value in a Lean enterprise and the activities, tools, and mechanics used to manage backlogs and programs.",
-      price: 895,
-      included: [
-        { description: "Attendee Workbook" },
-        { description: "Course certificate" },
-        { description: "Catered breakfast and lunch" },
-        { description: "Eligibility to take the SAFe® 4 Product Owner/Product Manager (POPM) exam" },
-        { description: "One year membership to the SAFe Community Platform" },
-      ]
-    },
-    {
       title: "Remote-Leading",
       subtitle: "SAFe 5.0",
       date: "August 20 - August 21, 2020",
@@ -60,7 +44,23 @@ export class CoursesBottomSectionComponent implements OnInit {
         { description: "Eligibility to take the SAFe® 4 Agile Test Automation exam" },
         { description: "One year membership to the SAFe Community Platform" },
       ]
-    }
+    },
+    {
+      title: "Remote-Scrum",
+      subtitle: "Master 5.0",
+      date: "August 24 - August 27, 2020",
+      img: "../../assets/img/logos/scrum-master-5.svg",
+      learnText: "The ICP-TST is one of two knowledge-based certifications on the Agile Testing Track. This certification focuses primarily on agile testing techniques and processes in addition to the mindset and role of an agile tester. Learning outcomes include the ability to distinguish and “agilize” the different types of testing on an agile effort, and understanding how business, development, and testing personnel best collaborate on an agile development cadence.",
+      learnText2: "In addition, course participants will learn agile test strategies and techniques related to release planning, testing within iterations, regression testing, performance testing, pre-deployment, and production support testing.",
+      price: 895,
+      included: [
+        { description: "Attendee Workbook" },
+        { description: "Course certificate" },
+        { description: "Catered breakfast and lunch" },
+        { description: "Eligibility to take the SAFe® 4 Agile Testing exam" },
+        { description: "One year membership to the SAFe Community Platform" },
+      ]
+    },
   ]
   
 }
