@@ -12,18 +12,21 @@
                     <div class="row card-container">
                         <div class="col-md-12 card-left">
                             <h3>
-                                {{course.title}}
+                                {{course.courseInfo.title}}
                                 <br>
-                                {{course.subtitle}}
+                                {{course.courseInfo.subtitle}}
                             </h3>
                             <h6>
                                 {{course.date}}
                             </h6>
-                            <img class="upcoming-courses-badge" src="{{course.img}}">
+                            <img class="upcoming-courses-badge" src="{{course.courseInfo.img}}">
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <a href="mailto:tkowalchuk@appddictionstudio.com" target="_blank">
-                                        <button type="button" class="card-btn-2 text-center">I AM INTERESTED</button>
+                                    <a routerLink="/course-cart">
+                                        <button (click)="addToCart(course.courseInfo)" type="button"
+                                            class="card-btn-2 text-center">
+                                            Register Now
+                                        </button>
                                     </a>
                                 </div>
                             </div>
@@ -39,19 +42,19 @@
                             </mat-expansion-panel-header>
                             <div class="col-md-12 card-right text-left">
                                 <p>
-                                    {{course.learnText}}
+                                    {{course.courseInfo.learnText}}
 
 
                                 </p>
                                 <p style="margin-top: 15px;">
-                                    {{course.learnText2}}
+                                    {{course.courseInfo.learnText2}}
                                 </p>
                                 <hr>
                                 <p>
                                     What's Inlcuded:
                                 </p>
                                 <ul class="card-list">
-                                    <li *ngFor="let included of course.included">{{included.description}}</li>
+                                    <li *ngFor="let included of course.courseInfo.included">{{included.description}}</li>
                                 </ul>
                             </div>
                         </mat-expansion-panel>
