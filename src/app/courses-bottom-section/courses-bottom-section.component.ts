@@ -122,10 +122,7 @@ export class CoursesBottomSectionComponent implements OnInit {
     price: 900,
     included: [
       { description: "Printed workbook (digital workbook for remote classes)" },
-      {
-        description:
-          "Preparation and eligibility to take the SAFe® 5 Scrum Master (SSM) exam",
-      },
+      { description: "Preparation and eligibility to take the SAFe® 5 Scrum Master (SSM) exam" },
       { description: "One-year membership to the SAFe Community Platform" },
       { description: "Course certificate of completion" },
     ],
@@ -154,6 +151,34 @@ export class CoursesBottomSectionComponent implements OnInit {
     ],
   };
 
+  certifiedScrumMaster = {
+    title: "Remote-Certified",
+    subtitle: " Scrum Master",
+    img: "../../assets/img/logos/SAI_BadgeSizes_DigitalBadging_CSM.png",
+    learnText: `Scrum is a simple yet incredibly powerful set of practices that help teams
+     deliver products in short cycles, enable fast feedback, and create a culture of rapid 
+     adaptation to change.
+    Companies today cannot afford to ideate, research, and develop a new product over a long 
+    period. The risk is that by the time the product is ready for launch, someone nimbler, 
+    faster, more agile, who is able to identify an opportunity and quickly bring a solution 
+    to life, has already taken the top spot in the market. This class teaches the foundations 
+    of Agile and provides a solid understanding of the Scrum framework.`,
+    learnText2: `Learn the essential concepts and tools of Scrum, including managing product backlogs, 
+    planning releases and sprints, tracking and reporting progress, and conducting stand-ups and retrospectives.
+
+    Taught by a certified Scrum Trainer, this class takes participants through a series of 
+    interactive exercises where they can learn and apply first-hand the principles of Scrum.
+    
+    At the end of the class, the participants are able to implement Scrum in their work 
+    environment, adopt a more innovative mindset, and drive an Agile culture change in their organization.`,
+    price: 900,
+    included: [
+      // { description: "Printed workbook (digital workbook for remote classes)" },
+      // { description: "Preparation and eligibility to take the Certified Scrum Master (SSM) exam" },
+      // { description: "Course certificate of completion" },
+    ],
+  };
+
   courses = [
     {
       courseInfo: this.agileFundamentals,
@@ -164,6 +189,11 @@ export class CoursesBottomSectionComponent implements OnInit {
       courseInfo: this.leadingSafe,
       date: "October 15 - October 16, 2020",
       courseDate: "Oct 15 2020",
+    },
+    {
+      courseInfo: this.certifiedScrumMaster,
+      date: "October 29 - October 30, 2020",
+      courseDate: "Oct 29 2020",
     },
     {
       courseInfo: this.agileTesting,
@@ -179,6 +209,11 @@ export class CoursesBottomSectionComponent implements OnInit {
       courseInfo: this.leadingSafe,
       date: "November 19 - November 16, 2020",
       courseDate: "Nov 19 2020",
+    },
+    {
+      courseInfo: this.certifiedScrumMaster,
+      date: "November 23 - November 24, 2020",
+      courseDate: "Nov 23 2020",
     },
     {
       courseInfo: this.scrumMaster,
@@ -201,6 +236,7 @@ export class CoursesBottomSectionComponent implements OnInit {
       courseDate: "Dec 17 2020",
     },
   ];
+  
   filterCourses() {
     var numberOfDaysToAdd = 60;
     var currentDate = new Date(); //Today Date    

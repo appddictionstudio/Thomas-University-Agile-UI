@@ -50,7 +50,7 @@
                                     {{course.courseInfo.learnText2}}
                                 </p>
                                 <hr>
-                                <p>
+                                <p *ngIf="course.courseInfo.included.length">
                                     What's Inlcuded:
                                 </p>
                                 <ul class="card-list">
