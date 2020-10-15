@@ -10,6 +10,6 @@ export class TransactionService {
   constructor(private http: HttpClient) { }
 
   createTransaction(appName: string, ob: Object) {
-    return this.http.post<any>(environment.transactionUrl + "transactions/create-cad-transaction?appName=" + appName, ob);
+    return this.http.post<any>(environment.transactionUrl + "transactions/create-usd-transaction?appName=" + appName, ob);
   }
 }
