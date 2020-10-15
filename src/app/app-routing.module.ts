@@ -6,6 +6,7 @@ import { CorporateTrainingComponent } from './corporate-training/corporate-train
 import { AgileManifestoComponent } from './agile-manifesto/agile-manifesto.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { InstructorsComponent } from './instructors/instructors.component';
+import { CourseCartComponent } from './course-cart/course-cart.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'instructors',
     component: InstructorsComponent,
+  },
+  {
+    path: 'course-cart',
+    component: CourseCartComponent,
   },
 ];
 

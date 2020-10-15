@@ -1,0 +1,62 @@
+.stepper-container {
+    background: transparent;
+    color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.blue-btn {
+    background: #25358e;
+    color: #fff;
+    float: right;
+}
+
+.back-btn {
+    background: transparent;
+    color: #25358e;
+    border: 2.2px solid #25358e;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.blue-text {
+    color: #25358e;
+}
+
+.cc-icon {
+    float: right;
+    margin-left: 8px;
+}
+
+.cc-icon img {
+    width: 50px;
+}
+
+::ng-deep.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #25358e !important;
+}
+
+// mat-input carent color
+::ng-deep .mat-input-element {
+    caret-color: #25358e !important;
+}
+
+// mat-label focused style
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #25358e !important;
+}
+
+::ng-deep.mat-horizontal-stepper-header-container {
+    white-space: nowrap;
+    display: none !important;
+    align-items: center;
+}
+
+::ng-deep.mat-horizontal-content-container {
+    overflow: hidden;
+    padding: 30px !important;
+}

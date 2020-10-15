@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { TransferDataService } from "../services/transfer-data.service";
 
 @Component({
-  selector: 'app-courses-bottom-section',
-  templateUrl: './courses-bottom-section.component.html',
-  styleUrls: ['./courses-bottom-section.component.scss']
+  selector: "app-courses-bottom-section",
+  templateUrl: "./courses-bottom-section.component.html",
+  styleUrls: ["./courses-bottom-section.component.scss"],
 })
 export class CoursesBottomSectionComponent implements OnInit {
+  selectedCourses: any[] = [];
   bottomFilter: any[] = [];
 
-  constructor() { }
+  constructor(public dataTransfer: TransferDataService) {}
 
   ngOnInit() {
     this.filterCourses();
+    this.emptyArray();
   }
 
   agileTesting = {
@@ -122,7 +125,10 @@ export class CoursesBottomSectionComponent implements OnInit {
     price: 900,
     included: [
       { description: "Printed workbook (digital workbook for remote classes)" },
-      { description: "Preparation and eligibility to take the SAFe® 5 Scrum Master (SSM) exam" },
+      {
+        description:
+          "Preparation and eligibility to take the SAFe® 5 Scrum Master (SSM) exam",
+      },
       { description: "One-year membership to the SAFe Community Platform" },
       { description: "Course certificate of completion" },
     ],
@@ -173,9 +179,15 @@ export class CoursesBottomSectionComponent implements OnInit {
     environment, adopt a more innovative mindset, and drive an Agile culture change in their organization.`,
     price: 900,
     included: [
-      // { description: "Printed workbook (digital workbook for remote classes)" },
-      // { description: "Preparation and eligibility to take the Certified Scrum Master (SSM) exam" },
-      // { description: "Course certificate of completion" },
+      {
+        description: "Attendee workbook (digital workbook for remote classes)",
+      },
+      {
+        description:
+          "Preparation and eligibility to take the Scrum Master Certification exam (exam fee included with registration)",
+      },
+      { description: "Two year membership to Scrum Alliance" },
+      { description: "14 PDUs from PMI (Project Management Institute)" },
     ],
   };
 
@@ -236,18 +248,27 @@ export class CoursesBottomSectionComponent implements OnInit {
       courseDate: "Dec 17 2020",
     },
   ];
-  
+
   filterCourses() {
     var numberOfDaysToAdd = 60;
-    var currentDate = new Date(); //Today Date    
+    var currentDate = new Date(); //Today Date
     var endDate = new Date();
     endDate.setDate(endDate.getDate() + numberOfDaysToAdd);
     var dateFiltered = this.courses.filter(
-      c => new Date(c.courseDate) >= new Date(currentDate) && new Date(c.courseDate) <= new Date(endDate)
-    )
+      (c) =>
+        new Date(c.courseDate) >= new Date(currentDate) &&
+        new Date(c.courseDate) <= new Date(endDate)
+    );
     this.bottomFilter = dateFiltered.splice(0, 3);
-    console.log(this.bottomFilter)
+    console.log(this.bottomFilter);
     return this.bottomFilter;
   }
-  
+
+  addToCart(val) {
+    this.selectedCourses.push(val);
+    this.dataTransfer.transactionObject.push(val);
+  }
+  emptyArray() {
+    this.dataTransfer.transactionObject = [];
+  }
 }

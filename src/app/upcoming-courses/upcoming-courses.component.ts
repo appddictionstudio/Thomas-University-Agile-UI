@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TransferDataService } from '../services/transfer-data.service';
 
 @Component({
   selector: 'app-upcoming-courses',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upcoming-courses.component.scss']
 })
 export class UpcomingCoursesComponent implements OnInit {
+  selectedCourses: any[] = [];
   filteredCourses: any[] = [];
 
-  constructor() { }
+  constructor(public dataTransfer: TransferDataService) { }
 
   agileTesting = {
     title: "Remote-ICAgile",
@@ -169,9 +171,10 @@ export class UpcomingCoursesComponent implements OnInit {
     environment, adopt a more innovative mindset, and drive an Agile culture change in their organization.`,
     price: 900,
     included: [
-      // { description: "Printed workbook (digital workbook for remote classes)" },
-      // { description: "Preparation and eligibility to take the Certified Scrum Master (SSM) exam" },
-      // { description: "Course certificate of completion" },
+      { description: "Attendee workbook (digital workbook for remote classes)" },
+      { description: "Preparation and eligibility to take the Scrum Master Certification exam (exam fee included with registration)" },
+      { description: "Two year membership to Scrum Alliance" },
+      { description: "14 PDUs from PMI (Project Management Institute)" }
     ],
   };
 
@@ -235,6 +238,7 @@ export class UpcomingCoursesComponent implements OnInit {
 
   ngOnInit() {
     this.filterCourses();
+    this.emptyArray();
   }
 
   filterCourses() {
@@ -247,6 +251,17 @@ export class UpcomingCoursesComponent implements OnInit {
     )
     console.log(this.filteredCourses)
     return this.filteredCourses;
+  }
+
+  addToCart(val) {
+    this.selectedCourses.push(val);
+    this.dataTransfer.transactionObject.push(val);
+  }
+
+  emptyArray() {
+    this.dataTransfer.transactionObject = [];
+    // this.coursesArray = [];
+    // this.coursesOnCart = [];
   }
   
 

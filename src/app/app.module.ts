@@ -15,6 +15,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { InstructorsComponent } from './instructors/instructors.component';
 import { FooterComponent } from './footer/footer.component';
 import { CoursesBottomSectionComponent } from './courses-bottom-section/courses-bottom-section.component';
+import { CourseCartComponent } from './course-cart/course-cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatStepperModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -27,14 +34,22 @@ import { CoursesBottomSectionComponent } from './courses-bottom-section/courses-
     ContactUsComponent,
     InstructorsComponent,
     FooterComponent,
-    CoursesBottomSectionComponent
+    CoursesBottomSectionComponent,
+    CourseCartComponent
   ],
   imports: [
     BrowserModule,
+    MatDialogModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     MatExpansionModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatStepperModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

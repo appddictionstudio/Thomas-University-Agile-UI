@@ -1,0 +1,263 @@
+<main class="wrapper">
+  <app-navbar></app-navbar>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <mat-horizontal-stepper linear #stepper class="stepper-container">
+          <mat-step>
+            <div *ngIf="coursesOnCart.length == 0" class="text-center pt-3">
+              <h3 class="blue-text">Your Cart is Empty</h3>
+              <button mat-button routerLink="/upcoming-courses" class="back-btn">
+                BACK
+              </button>
+            </div>
+            <div class="cart-container w-100" *ngIf="coursesOnCart.length > 0">
+              <div class="row">
+                <div class="col-4 cart-left">
+                  <div class="row" *ngFor="let class of coursesOnCart;">
+                    <div class="col-12 text-center">
+                      <h2>
+                        {{class.title}} {{class.subtitle}}
+                      </h2>
+                      <img class="w-75" src="{{class.img}}">
+                      <h2>
+                        {{class.date}}
+                      </h2>
+                      <hr>
+                      <p class="total-title">
+                        CART TOTAL
+                      </p>
+                      <h2 class="cart-total">
+                        ${{class.price}}
+                      </h2>
+                      <button (click)="emptyArray()" mat-button routerLink="/upcoming-courses" class="back-btn">
+                        BACK
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-8 h-100">
+                  <form class="row" [formGroup]="checkoutInfo">
+                    <div class="col-12">
+                      <mat-label>Email</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" formControlName="email" matInput placeholder="name@mail.com" required>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                      <mat-label>First Name</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" formControlName="firstName" matInput placeholder="Enter First Name" required>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                      <mat-label>Last Name</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" formControlName="lastName" matInput placeholder="Enter Last Name" required>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-12">
+                      <mat-label>Card Number</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" formControlName="creditCardNumber" matInput
+                          placeholder="Enter your card number" required>
+                      </mat-form-field>
+                      <br>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <span class="cc-icon"><img src="../../assets/img/icons/cc-icons/Dark Color/1.png"></span>
+                      <span class="cc-icon"><img src="../../assets/img/icons/cc-icons/Dark Color/2.png"></span>
+                      <span class="cc-icon"><img src="../../assets/img/icons/cc-icons/Dark Color/14.png"></span>
+                      <span class="cc-icon"><img src="../../assets/img/icons/cc-icons/Dark Color/22.png"></span>
+                    </div>
+                    <div class="col-8">
+                      <mat-label>Expiration Date</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" placeholder="MM/YY" formControlName="expirationDate" matInput mask="00/00">
+                      </mat-form-field>
+                    </div>
+                    <div class="col-4">
+                      <mat-label>CCV</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" placeholder="000" formControlName="ccv" matInput mask="000">
+                      </mat-form-field>
+                    </div>
+                    <div class="col-12">
+                      <h4>Billing Address</h4>
+                    </div>
+                    <div class="col-12">
+                      <mat-label>Address</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" formControlName="address" matInput placeholder="" required>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-12">
+                      <mat-label>City</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" formControlName="city" matInput placeholder="" required>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                      <mat-label>State</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" formControlName="state" matInput placeholder="" required>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                      <mat-label>ZipCode</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" formControlName="zipCode" matInput placeholder="" required>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-12">
+                      <mat-label>Country</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <input type="text" formControlName="country" matInput placeholder="" required>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" (click)="getCustomerData()" [disabled]="!checkoutInfo.valid" mat-button
+                        class="blue-btn px-5" matStepperNext>
+                        NEXT
+                        <!-- <i class="ml-2 fas fa-chevron-right"></i> -->
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </mat-step>
+
+          <!-- ========================== -->
+
+
+          <mat-step>
+            <div class="cart-container w-100">
+              <div class="row">
+                <div class="col-4 cart-left">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="course-title mb-2">
+                        Purchasing
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row my-4" *ngFor="let class of coursesOnCart">
+                    <div class="col-12 course-title">
+                      <img class="w-50" src="{{class.img}}">
+                      <br>
+                      {{class.title}} {{class.subtitle}}
+                      <br>
+                      <p class="my-2" style="font-weight: 500;">
+                        {{class.date}}
+                      </p>
+                      <p class="m-0" style="font-weight: 500;">
+                        ${{class.price}}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spacer-row"></div>
+                  <div class="row">
+                    <div class="col-12">
+                      <button mat-button class="back-btn" matStepperPrevious>
+                        BACK
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div *ngIf="customer" class="col-8 text-right">
+                  <p class="info-title">
+                    <!-- {{customer.firstName}}, {{customer.lastName}}  -->
+                  </p>
+                  <p class="info-title">
+                    {{customer.email}} </p>
+                  <p class="info-title mb-5">
+                    <i class="fas fa-credit-card"></i>
+                    ({{ccDigits}})
+                  </p>
+                  <p class="payment-title">
+                    PAYMENT DATE
+                  </p>
+                  <p class="date-title">
+                    {{date | date: 'mediumDate'}} </p>
+                  <p class="payment-title">
+                    TOTAL
+                  </p>
+                  <p class="date-title">
+                    ${{totalPrice}}
+                  </p>
+                  <button (click)="makePayment()" mat-button class="blue-btn px-5" matStepperNext>
+                    PAY ${{totalPrice}}
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+          </mat-step>
+
+          <mat-step>
+            <div class="cart-container w-100">
+              <div class="row" *ngFor="let class of coursesOnCart;">
+                <div class="col-7 cart-left">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                    </div>
+                    <div *ngIf="paymentSuccess == 1" class="col-12 text-center confirmation-text">
+                      <i class="fas fa-check-circle"></i>
+                      Your payment was successful
+                    </div>
+                    <div *ngIf="paymentSuccess == 2" class="col-12 text-center error-text">
+                      <i class="far fa-times-circle"></i>
+                      Your payment was not successful
+                    </div>
+                    <div *ngIf="paymentSuccess == 3" class="col-12 text-center proccessing-text">
+                      Proccessing
+                      <br>
+                      <!-- <img src="../../assets/img/misc/Dual Ring-1s-200px.gif"> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-5 text-right">
+                  <p *ngIf="paymentSuccess == 1" class="info-title">
+                    Your payment of <span style="font-weight: bold;">${{totalPrice}}</span> has been processed.
+                  </p>
+                  <button *ngIf="paymentSuccess == 1" mat-button class="receipt-btn mb-5">
+                    PRINT RECEIPT
+                  </button>
+                  <p class="payment-title">
+                    PAYMENT DATE
+                  </p>
+                  <p class="date-title">
+                    {{date | date: 'mediumDate'}}
+                  </p>
+                  <p *ngIf="paymentSuccess == 1" class="payment-title">
+                    TOTAL
+                  </p>
+                  <p *ngIf="paymentSuccess == 1" class="date-title">
+                    ${{totalPrice}}
+                  </p>
+                  <p *ngIf="paymentSuccess == 1" class="payment-title">
+                    STATUS
+                  </p>
+                  <p *ngIf="paymentSuccess == 1" class="paid-title">
+                    PAID
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+          </mat-step>
+
+          <!-- ============================ -->
+
+
+
+        </mat-horizontal-stepper>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</main>
