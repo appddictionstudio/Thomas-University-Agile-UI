@@ -26,7 +26,7 @@
                     <img class="upcoming-courses-badge" src="{{course.courseInfo.img}}">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <a routerLink="/course-cart">
+                            <a href="mailto:tkowalchuk@appddictionstudio.com?subject={{course.courseInfo.title}} {{course.courseInfo.subtitle}} Course Registration">
                                 <button (click)="addToCart(course.courseInfo)" type="button"
                                     class="card-btn-2 text-center">
                                     Register Now
