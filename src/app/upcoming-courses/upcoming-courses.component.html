@@ -22,12 +22,11 @@
                             <img class="upcoming-courses-badge" src="{{course.courseInfo.img}}">
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <a href="mailto:tkowalchuk@appddictionstudio.com?subject={{course.courseInfo.title}} {{course.courseInfo.subtitle}} Course Registration">
-                                        <button (click)="addToCart(course.courseInfo)" type="button"
-                                            class="card-btn-2 text-center">
-                                            Register Now
-                                        </button>
-                                    </a>
+                                    <button (click)="addToCart(course.courseInfo)" type="button"
+                                        class="card-btn-2 text-center">
+                                        Register Now
+                                    </button>
+
                                 </div>
                             </div>
                             <hr>
@@ -54,7 +53,8 @@
                                     What's Included:
                                 </p>
                                 <ul class="card-list">
-                                    <li *ngFor="let included of course.courseInfo.included">{{included.description}}</li>
+                                    <li *ngFor="let included of course.courseInfo.included">{{included.description}}
+                                    </li>
                                 </ul>
                             </div>
                         </mat-expansion-panel>
