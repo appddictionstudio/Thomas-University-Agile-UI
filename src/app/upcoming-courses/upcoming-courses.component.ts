@@ -24,7 +24,7 @@ export class UpcomingCoursesComponent implements OnInit {
      understanding of how business, development, and testing personnel collaborate 
      best through an agile development cadence. `,
     learnText2: ``,
-    price: 900,
+    price: .01,
     included: [
       { description: "Printed workbook (digital workbook for remote classes)" },
       { description: "ICP-TST Certification" },
@@ -33,7 +33,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   leadingSafe = {
-    id:2,
+    id: 2,
     title: "Remote-Leading",
     subtitle: " SAFe 5.0",
     img: "../../assets/img/logos/leading safe badge.png",
@@ -57,7 +57,7 @@ export class UpcomingCoursesComponent implements OnInit {
 
     Attending the class prepares individuals to take the exam and become a 
     certified SAFe® Agilist (SA)`,
-    price: 900,
+    price: .01,
     included: [
       {
         description: "Attendee workbook (digital workbook for remote classes)",
@@ -72,7 +72,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   safePopm = {
-    id:3,
+    id: 3,
     title: "Remote-SAFe",
     subtitle: "POPM 5.0",
     img: "../../assets/img/logos/popm-5.png",
@@ -88,7 +88,7 @@ export class UpcomingCoursesComponent implements OnInit {
     plan Program Increments. Finally, attendees learn about the Continuous Delivery 
     Pipeline and DevOps culture, how to effectively integrate as Product Owners and 
     Product Managers, and what it takes to relentlessly improve the ART`,
-    price: 900,
+    price: .01,
     included: [
       {
         description: "Attendee workbook (digital workbook for remote classes)",
@@ -103,7 +103,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   scrumMaster = {
-    id:4,
+    id: 4,
     title: "Remote-Scrum",
     subtitle: "Master 5.0",
     img: "../../assets/img/logos/scrum-master-5.svg",
@@ -121,7 +121,7 @@ export class UpcomingCoursesComponent implements OnInit {
     at scale. SAFe 5 Scrum Master (SSM) certification signifies that people are prepared to perform 
     the role of Scrum Master in a SAFe environment, increasing their value to teams and organizations 
     that are implementing SAFe.`,
-    price: 900,
+    price: .01,
     included: [
       { description: "Printed workbook (digital workbook for remote classes)" },
       { description: "Preparation and eligibility to take the SAFe® 5 Scrum Master (SSM) exam" },
@@ -131,7 +131,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   agileFundamentals = {
-    id:5,
+    id: 5,
     title: "Remote-Agile",
     subtitle: "Fundamentals",
     img: "../../assets/img/logos/ICP - Agile Fundamentals badge[4189].png",
@@ -146,7 +146,7 @@ export class UpcomingCoursesComponent implements OnInit {
     of continuous feedback, learning, and adaptation for products, processes, 
     teams, and organizations.`,
     learnText2: ``,
-    price: 900,
+    price: .01,
     included: [
       { description: "Printed workbook (digital workbook for remote classes)" },
       { description: "ICP Certification" },
@@ -155,7 +155,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   certifiedScrumMaster = {
-    id:6,
+    id: 6,
     title: "Remote-Certified",
     subtitle: " Scrum Master",
     img: "../../assets/img/logos/SAI_BadgeSizes_DigitalBadging_CSM.png",
@@ -175,7 +175,7 @@ export class UpcomingCoursesComponent implements OnInit {
     
     At the end of the class, the participants are able to implement Scrum in their work 
     environment, adopt a more innovative mindset, and drive an Agile culture change in their organization.`,
-    price: 900,
+    price: .01,
     included: [
       { description: "Attendee workbook (digital workbook for remote classes)" },
       { description: "Preparation and eligibility to take the Scrum Master Certification exam (exam fee included with registration)" },
@@ -269,6 +269,4 @@ export class UpcomingCoursesComponent implements OnInit {
     // this.coursesArray = [];
     // this.coursesOnCart = [];
   }
-  
-
 }

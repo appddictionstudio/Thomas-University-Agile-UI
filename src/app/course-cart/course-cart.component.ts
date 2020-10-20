@@ -63,7 +63,7 @@ export class CourseCartComponent implements OnInit {
       product.id = cart.id;
       product.courseTitle = cart.title + " " + cart.subtitle;
       product.description = cart.included[0].description;
-      product.date = cart.date
+      // product.date = cart.date
       product.unitPrice = cart.price;
       this.coursesArray.forEach((course) => {
         if (cart.id === course.id) {
