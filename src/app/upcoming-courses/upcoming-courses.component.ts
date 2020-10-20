@@ -13,6 +13,7 @@ export class UpcomingCoursesComponent implements OnInit {
   constructor(public dataTransfer: TransferDataService) { }
 
   agileTesting = {
+    id: 1,
     title: "Remote-ICAgile",
     subtitle: " Agile Testing",
     img: "../../assets/img/logos/agile-test.png",
@@ -32,6 +33,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   leadingSafe = {
+    id:2,
     title: "Remote-Leading",
     subtitle: " SAFe 5.0",
     img: "../../assets/img/logos/leading safe badge.png",
@@ -70,6 +72,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   safePopm = {
+    id:3,
     title: "Remote-SAFe",
     subtitle: "POPM 5.0",
     img: "../../assets/img/logos/popm-5.png",
@@ -100,6 +103,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   scrumMaster = {
+    id:4,
     title: "Remote-Scrum",
     subtitle: "Master 5.0",
     img: "../../assets/img/logos/scrum-master-5.svg",
@@ -127,6 +131,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   agileFundamentals = {
+    id:5,
     title: "Remote-Agile",
     subtitle: "Fundamentals",
     img: "../../assets/img/logos/ICP - Agile Fundamentals badge[4189].png",
@@ -150,6 +155,7 @@ export class UpcomingCoursesComponent implements OnInit {
   };
 
   certifiedScrumMaster = {
+    id:6,
     title: "Remote-Certified",
     subtitle: " Scrum Master",
     img: "../../assets/img/logos/SAI_BadgeSizes_DigitalBadging_CSM.png",

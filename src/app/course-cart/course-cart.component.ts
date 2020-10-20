@@ -133,7 +133,7 @@ export class CourseCartComponent implements OnInit {
 
   makePayment() {
     this.ts
-      .createTransaction("STMU", this.customer)
+      .createTransaction("TU", this.customer)
       .toPromise()
       .then((res) => {
         console.log(res);
