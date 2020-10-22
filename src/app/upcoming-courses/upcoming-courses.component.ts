@@ -24,7 +24,7 @@ export class UpcomingCoursesComponent implements OnInit {
      understanding of how business, development, and testing personnel collaborate 
      best through an agile development cadence. `,
     learnText2: ``,
-    price: .01,
+    price: 900,
     included: [
       { description: "Printed workbook (digital workbook for remote classes)" },
       { description: "ICP-TST Certification" },
@@ -57,7 +57,7 @@ export class UpcomingCoursesComponent implements OnInit {
 
     Attending the class prepares individuals to take the exam and become a 
     certified SAFe® Agilist (SA)`,
-    price: .01,
+    price: 900,
     included: [
       {
         description: "Attendee workbook (digital workbook for remote classes)",
@@ -88,7 +88,7 @@ export class UpcomingCoursesComponent implements OnInit {
     plan Program Increments. Finally, attendees learn about the Continuous Delivery 
     Pipeline and DevOps culture, how to effectively integrate as Product Owners and 
     Product Managers, and what it takes to relentlessly improve the ART`,
-    price: .01,
+    price: 900,
     included: [
       {
         description: "Attendee workbook (digital workbook for remote classes)",
@@ -121,7 +121,7 @@ export class UpcomingCoursesComponent implements OnInit {
     at scale. SAFe 5 Scrum Master (SSM) certification signifies that people are prepared to perform 
     the role of Scrum Master in a SAFe environment, increasing their value to teams and organizations 
     that are implementing SAFe.`,
-    price: .01,
+    price: 900,
     included: [
       { description: "Printed workbook (digital workbook for remote classes)" },
       { description: "Preparation and eligibility to take the SAFe® 5 Scrum Master (SSM) exam" },
@@ -146,7 +146,7 @@ export class UpcomingCoursesComponent implements OnInit {
     of continuous feedback, learning, and adaptation for products, processes, 
     teams, and organizations.`,
     learnText2: ``,
-    price: .01,
+    price: 900,
     included: [
       { description: "Printed workbook (digital workbook for remote classes)" },
       { description: "ICP Certification" },
@@ -175,7 +175,7 @@ export class UpcomingCoursesComponent implements OnInit {
     
     At the end of the class, the participants are able to implement Scrum in their work 
     environment, adopt a more innovative mindset, and drive an Agile culture change in their organization.`,
-    price: .01,
+    price: 900,
     included: [
       { description: "Attendee workbook (digital workbook for remote classes)" },
       { description: "Preparation and eligibility to take the Scrum Master Certification exam (exam fee included with registration)" },
