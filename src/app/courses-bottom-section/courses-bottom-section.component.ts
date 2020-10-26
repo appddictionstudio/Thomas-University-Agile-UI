@@ -214,12 +214,12 @@ export class CoursesBottomSectionComponent implements OnInit {
     },
     {
       courseInfo: this.agileFundamentals,
-      date: "November 19 - November 16, 2020",
+      date: "November 19 - November 20, 2020",
       courseDate: "Nov 19 2020",
     },
     {
       courseInfo: this.leadingSafe,
-      date: "November 19 - November 16, 2020",
+      date: "November 19 - November 20, 2020",
       courseDate: "Nov 19 2020",
     },
     {
