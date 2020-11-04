@@ -191,6 +191,38 @@ export class CoursesBottomSectionComponent implements OnInit {
     ],
   };
 
+  safeArchitects = {
+    // id: 7,
+    title: "Remote-Certified",
+    subtitle: " SAFe Architect",
+    img: "../../assets/img/logos/cert_mark_ARCH_badge_large_300px.png",
+    learnText: `Attendees can improve collaboration and alignment in a SAFe® 
+    Lean-Agile enterprise when they become a SAFe 5 Architect. The SAFe® for 
+    Architects course prepares System, Solution, and Enterprise Architects to engage 
+    across the organization as effective leaders and change agents who collaboratively 
+    deliver architectural solutions.
+    During this three-day course, attendees will explore the roles, responsibilities, 
+    and mindset of Agile Architects, and appreciate how to align architecture with 
+    business value and drive continuous flow to large systems-of-systems while 
+    supporting SAFe program execution.`,
+    learnText2: `This course is for senior technical contributors who need to understand the role of System, 
+    Solution, and Enterprise Architects in Lean-Agile enterprises. The course is also appropriate for 
+    individuals desiring a deeper view into how architecture enables continuous value flow and how 
+    architects engage in, and contribute to, a Lean-Agile enterprise.`,
+    price: 2000,
+    included: [
+      {
+        description: "Attendee workbook (digital workbook for remote classes)",
+      },
+      {
+        description:
+          "Eligibility to take the SAFe® 5 Architect (ARCH) exam",
+      },
+      { description: " One-year membership to the SAFe Community Platform" },
+      { description: "Course certificate of completion" },
+    ],
+  };
+
   courses = [
     {
       courseInfo: this.agileFundamentals,
@@ -233,14 +265,9 @@ export class CoursesBottomSectionComponent implements OnInit {
       courseDate: "Dec 3 2020",
     },
     {
-      courseInfo: this.agileFundamentals,
-      date: "December 10 - December 11, 2020",
-      courseDate: "Dec 3 2020",
-    },
-    {
-      courseInfo: this.leadingSafe,
-      date: "December 10 - December 11, 2020",
-      courseDate: "Dec 3 2020",
+      courseInfo: this.safeArchitects,
+      date: "December 14 - December 16, 2020",
+      courseDate: "Dec 14 2020",
     },
     {
       courseInfo: this.safePopm,
