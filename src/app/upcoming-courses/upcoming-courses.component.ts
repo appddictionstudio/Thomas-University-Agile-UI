@@ -262,11 +262,7 @@ export class UpcomingCoursesComponent implements OnInit {
       date: "December 14 - December 16, 2020",
       courseDate: "Dec 14 2020",
     },
-    {
-      courseInfo: this.safePopm,
-      date: "December 17 - December 18, 2020",
-      courseDate: "Dec 17 2020",
-    },
+   
   ];
 
   ngOnInit() {
