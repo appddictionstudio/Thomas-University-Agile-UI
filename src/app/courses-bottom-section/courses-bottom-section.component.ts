@@ -191,8 +191,29 @@ export class CoursesBottomSectionComponent implements OnInit {
     ],
   };
 
+  releaseTrainEngineer = {
+    title: "Remote-Release",
+    subtitle: "Train Engineer",
+    img: "../../assets/img/logos/rteBadge.png",
+    learnText: `In this three-day class attendees explore the skills needed to facilitate and enable
+     end-to-end value delivery through Agile Release Trains (ARTs)—and learn how to build a high-performing 
+     ART through servant leadership and coaching—by becoming a SAFe® 5 Release Train Engineer (RTE). Attendees 
+     will gain an in-depth understanding of the role and responsibilities of an RTE in the SAFe® enterprise.`,
+    learnText2: `Through experiential learning, attendees will examine the RTE role in a Lean-Agile transformation. 
+    They will learn how to facilitate ART processes and execution, coach leaders, teams, and Scrum Masters in new 
+    processes and mindsets. They will also learn how to prepare, plan and execute a Program Increment (PI) planning 
+    event, the primarily enabler of alignment throughout all levels of a SAFe® organization.`,
+    price: 2000,
+    included: [
+      { description: "Attendee workbook" },
+      { description: "Preparation and eligibility to take the SAFe® 5 Release Train Engineer (RTE) exam" },
+      { description: "One year membership to the SAFe® Community Platform" },
+      { description: "Course certificate of completion" }
+    ],
+  };
+
   safeArchitects = {
-    // id: 7,
+    id: 7,
     title: "Remote-Certified",
     subtitle: " SAFe Architect",
     img: "../../assets/img/logos/cert_mark_ARCH_badge_large_300px.png",
@@ -215,8 +236,7 @@ export class CoursesBottomSectionComponent implements OnInit {
         description: "Attendee workbook (digital workbook for remote classes)",
       },
       {
-        description:
-          "Eligibility to take the SAFe® 5 Architect (ARCH) exam",
+        description: "Eligibility to take the SAFe® 5 Architect (ARCH) exam",
       },
       { description: " One-year membership to the SAFe Community Platform" },
       { description: "Course certificate of completion" },
@@ -226,51 +246,50 @@ export class CoursesBottomSectionComponent implements OnInit {
   courses = [
     {
       courseInfo: this.agileFundamentals,
-      date: "October 15 - October 16, 2020",
-      courseDate: "Oct 15 2020",
-    },
-    {
-      courseInfo: this.leadingSafe,
-      date: "October 15 - October 16, 2020",
-      courseDate: "Oct 15 2020",
-    },
-    {
-      courseInfo: this.certifiedScrumMaster,
-      date: "October 29 - October 30, 2020",
-      courseDate: "Oct 29 2020",
+      date: "January 14 - January 15, 2021",
+      courseDate: "Jan 14 2021",
     },
     {
       courseInfo: this.agileTesting,
-      date: "November 5 - November 6, 2020",
-      courseDate: "Nov 5 2020",
-    },
-    {
-      courseInfo: this.agileFundamentals,
-      date: "November 19 - November 20, 2020",
-      courseDate: "Nov 19 2020",
+      date: "January 23 - January 14, 2021",
+      courseDate: "Jan 23 2021", 
     },
     {
       courseInfo: this.leadingSafe,
-      date: "November 19 - November 20, 2020",
-      courseDate: "Nov 19 2020",
+      date: "January 28 - January 29, 2021",
+      courseDate: "Jan 28 2021", 
     },
     {
-      courseInfo: this.certifiedScrumMaster,
-      date: "November 23 - November 24, 2020",
-      courseDate: "Nov 23 2020",
+      courseInfo: this.safePopm,
+      date: "February 8 - February 11, 2021",
+      courseDate: "Feb 8 2021", 
+    },
+    {
+      courseInfo: this.releaseTrainEngineer,
+      date: "February 10 - February 12, 2021",
+      courseDate: "Feb 10 2021", 
     },
     {
       courseInfo: this.scrumMaster,
-      date: "December 3 - December 4, 2020",
-      courseDate: "Dec 3 2020",
+      date: "February 20 - February 21, 2021",
+      courseDate: "Feb 20 2021", 
     },
     {
       courseInfo: this.safeArchitects,
-      date: "December 14 - December 16, 2020",
-      courseDate: "Dec 14 2020",
+      date: "February 24 - February 26, 2021",
+      courseDate: "Feb 24 2021", 
     },
-   
-  ];
+    {
+      courseInfo: this.leadingSafe,
+      date: "March 18 - March 19, 2021",
+      courseDate: "Mar 18 2021", 
+    },
+    {
+      courseInfo: this.agileFundamentals,
+      date: "March 22 - March 25, 2021",
+      courseDate: "Mar 22 2021", 
+    },
+  ]; 
 
   filterCourses() {
     var numberOfDaysToAdd = 60;
