@@ -4,7 +4,7 @@ import { TransferDataService } from "../services/transfer-data.service";
 import { TransactionService } from "../services/transaction.service";
 import { ThrowStmt } from "@angular/compiler";
 import { ProductInfo } from "../models/productInfo";
-
+declare var require: any
 @Component({
   selector: "app-course-cart",
   templateUrl: "./course-cart.component.html",
@@ -23,6 +23,10 @@ export class CourseCartComponent implements OnInit {
   receiptPrice = 0;
   paymentSuccess = 3;
 
+  worldMapData = require('city-state-country');
+  countryList = [];
+  statesList = [];
+
   constructor(
     private _formBuilder: FormBuilder,
     private dataTransfer: TransferDataService,
@@ -30,6 +34,7 @@ export class CourseCartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.getAllCountries();
     this.coursesOnCart = this.dataTransfer.transactionObject;
     this.coursesArray = this.dataTransfer.transactionObject;
     console.log(this.coursesArray);
@@ -48,9 +53,29 @@ export class CourseCartComponent implements OnInit {
       state: ["", Validators.required],
       zipCode: ["", Validators.required],
       country: ["", Validators.required],
+      memo: ["", Validators.required],
     });
     console.log(this.coursesOnCart);
     console.log(this.coursesArray);
+  }
+
+  getCountryState(countryName, countryId) {
+    const statesList = [] = this.worldMapData.getAllStates();
+    var result = [] = statesList.filter(obj => {
+      return obj.country_id === countryId.toString();
+    })
+    this.statesList = result;
+  }
+
+  getAllCountries() {
+    const countriesList = this.worldMapData.searchCountry('');
+
+    var i;
+    for (i = 0; i < countriesList.length; i++) {
+      this.countryList.push(countriesList[i]);
+    }
+    console.log(this.countryList)
+    return this.countryList;
   }
 
   generateArray() {

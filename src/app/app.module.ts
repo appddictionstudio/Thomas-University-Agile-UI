@@ -22,6 +22,8 @@ import { MatDialogModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatStepperModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material/select';
+import { NgxMaskModule, IConfig } from "ngx-mask";
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { MatStepperModule } from '@angular/material';
   ],
   imports: [
     BrowserModule,
+    NgxMaskModule.forRoot(),
     MatDialogModule,
+    MatSelectModule,
     FormsModule,
     MatInputModule,
     ReactiveFormsModule,

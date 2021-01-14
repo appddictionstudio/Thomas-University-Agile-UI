@@ -39,19 +39,22 @@
                 <div class="col-8 h-100">
                   <form class="row" [formGroup]="checkoutInfo">
                     <div class="col-12">
+                      <h2>Billing Information</h2>
+                    </div>
+                    <div class="col-12">
                       <mat-label>Email</mat-label>
                       <mat-form-field class="w-100 " appearance="outline">
                         <input type="text" formControlName="email" matInput placeholder="name@mail.com" required>
                       </mat-form-field>
                     </div>
                     <div class="col-md-6">
-                      <mat-label>First Name</mat-label>
+                      <mat-label>First Name (as it apprears on the card)</mat-label>
                       <mat-form-field class="w-100 " appearance="outline">
                         <input type="text" formControlName="firstName" matInput placeholder="Enter First Name" required>
                       </mat-form-field>
                     </div>
                     <div class="col-md-6">
-                      <mat-label>Last Name</mat-label>
+                      <mat-label>Last Name (as it apprears on the card)</mat-label>
                       <mat-form-field class="w-100 " appearance="outline">
                         <input type="text" formControlName="lastName" matInput placeholder="Enter Last Name" required>
                       </mat-form-field>
@@ -59,27 +62,27 @@
                     <div class="col-12">
                       <mat-label>Card Number</mat-label>
                       <mat-form-field class="w-100 " appearance="outline">
-                        <input type="text" formControlName="creditCardNumber" matInput
+                        <input type="text" formControlName="creditCardNumber" matInput mask="0000-0000-0000-0009"
                           placeholder="Enter your card number" required>
                       </mat-form-field>
-                      <br>
                     </div>
-                    <div class="col-12 mb-3">
-                      <span class="cc-icon"><img src="../../assets/img/icons/cc-icons/Dark Color/1.png"></span>
-                      <span class="cc-icon"><img src="../../assets/img/icons/cc-icons/Dark Color/2.png"></span>
-                      <span class="cc-icon"><img src="../../assets/img/icons/cc-icons/Dark Color/14.png"></span>
-                      <span class="cc-icon"><img src="../../assets/img/icons/cc-icons/Dark Color/22.png"></span>
-                    </div>
-                    <div class="col-8">
+                    <div class="col-md-8">
                       <mat-label>Expiration Date</mat-label>
                       <mat-form-field class="w-100 " appearance="outline">
                         <input type="text" placeholder="MM/YY" formControlName="expirationDate" matInput mask="00/00">
                       </mat-form-field>
                     </div>
-                    <div class="col-4">
+                    <div class="col-md-4">
                       <mat-label>CCV</mat-label>
                       <mat-form-field class="w-100 " appearance="outline">
-                        <input type="text" placeholder="000" formControlName="ccv" matInput mask="000">
+                        <input type="text" placeholder="000" formControlName="ccv" matInput mask="0009">
+                      </mat-form-field>
+                    </div>
+                    <div class="col-12">
+                      <mat-label>Memo</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <textarea type="text" formControlName="memo" matInput placeholder="Memo">
+                          </textarea>
                       </mat-form-field>
                     </div>
                     <div class="col-12">
@@ -91,28 +94,39 @@
                         <input type="text" formControlName="address" matInput placeholder="" required>
                       </mat-form-field>
                     </div>
-                    <div class="col-12">
+                    <div class="col-md-6">
+                      <mat-label>Country</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <!-- <input type="text" formControlName="country" matInput placeholder="" required> -->
+                        <mat-select formControlName="country">
+                          <mat-option (click)="getCountryState(country.name, country.id)"
+                            *ngFor="let country of countryList" value="{{country.name}}" required>
+                            {{country.name}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                      <mat-label>State</mat-label>
+                      <mat-form-field class="w-100 " appearance="outline">
+                        <!-- <input type="text" formControlName="state" matInput placeholder="" required> -->
+                        <mat-select formControlName="state">
+                          <mat-option *ngFor="let state of statesList" value="{{state.name}}" required>
+                            {{state.name}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
                       <mat-label>City</mat-label>
                       <mat-form-field class="w-100 " appearance="outline">
                         <input type="text" formControlName="city" matInput placeholder="" required>
                       </mat-form-field>
                     </div>
-                    <div class="col-6">
-                      <mat-label>State</mat-label>
-                      <mat-form-field class="w-100 " appearance="outline">
-                        <input type="text" formControlName="state" matInput placeholder="" required>
-                      </mat-form-field>
-                    </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                       <mat-label>ZipCode</mat-label>
                       <mat-form-field class="w-100 " appearance="outline">
                         <input type="text" formControlName="zipCode" matInput placeholder="" required>
-                      </mat-form-field>
-                    </div>
-                    <div class="col-12">
-                      <mat-label>Country</mat-label>
-                      <mat-form-field class="w-100 " appearance="outline">
-                        <input type="text" formControlName="country" matInput placeholder="" required>
                       </mat-form-field>
                     </div>
                     <div class="col-12">

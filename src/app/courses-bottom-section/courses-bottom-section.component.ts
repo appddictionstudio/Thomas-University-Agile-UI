@@ -245,11 +245,6 @@ export class CoursesBottomSectionComponent implements OnInit {
 
   courses = [
     {
-      courseInfo: this.agileTesting,
-      date: "January 23 - January 24, 2021",
-      courseDate: "Jan 23 2021", 
-    },
-    {
       courseInfo: this.leadingSafe,
       date: "January 28 - January 29, 2021",
       courseDate: "Jan 28 2021", 

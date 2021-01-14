@@ -32,6 +32,15 @@
     width: 50px;
 }
 
+::ng-deep.mat-select-value, 
+::ng-deep.mat-select-arrow, 
+.mat-primary  {
+    color: #505464 !important;
+}
+::ng-deep.mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #fff !important;
+}
+
 ::ng-deep.mat-form-field-appearance-outline .mat-form-field-outline {
     color: rgba(0, 0, 0, 0.5);
 }
