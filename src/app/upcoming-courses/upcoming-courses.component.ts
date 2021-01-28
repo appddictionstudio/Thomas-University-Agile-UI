@@ -71,36 +71,6 @@ export class UpcomingCoursesComponent implements OnInit {
     ],
   };
 
-  safePopm = {
-    id: 3,
-    title: "Remote-SAFe",
-    subtitle: "POPM 5.0",
-    img: "../../assets/img/logos/popm-5.png",
-    learnText: `During this two-day course, attendees will gain an 
-    in-depth understanding of the Agile Release Train (ART), how it 
-    delivers value, and what they can do to effectively perform their role.
-    They will develop the skillsets needed to guide the delivery of 
-    value in a Lean enterprise—and learn about the activities, tools, 
-    and mechanics used to manage backlogs and programs—by becoming a SAFe® 5 
-    Product Owner/Product Manager (POPM).`,
-    learnText2: `They will also learn how to apply Lean thinking to write Epics, 
-    break them down into Features and Stories, plan and execute Iterations, and 
-    plan Program Increments. Finally, attendees learn about the Continuous Delivery 
-    Pipeline and DevOps culture, how to effectively integrate as Product Owners and 
-    Product Managers, and what it takes to relentlessly improve the ART`,
-    price: 900,
-    included: [
-      {
-        description: "Attendee workbook (digital workbook for remote classes)",
-      },
-      {
-        description:
-          "Preparation and eligibility to take the SAFe® 5 Product Owner/Product Manager (POPM) exam",
-      },
-      { description: "One year membership to the SAFe Community Platform" },
-      { description: "Course certificate of completion" },
-    ],
-  };
 
   scrumMaster = {
     id: 4,
@@ -184,27 +154,6 @@ export class UpcomingCoursesComponent implements OnInit {
     ],
   };
   
-  releaseTrainEngineer = {
-    title: "Remote-Release",
-    subtitle: "Train Engineer",
-    img: "../../assets/img/logos/rteBadge.png",
-    learnText: `In this three-day class attendees explore the skills needed to facilitate and enable
-     end-to-end value delivery through Agile Release Trains (ARTs)—and learn how to build a high-performing 
-     ART through servant leadership and coaching—by becoming a SAFe® 5 Release Train Engineer (RTE). Attendees 
-     will gain an in-depth understanding of the role and responsibilities of an RTE in the SAFe® enterprise.`,
-    learnText2: `Through experiential learning, attendees will examine the RTE role in a Lean-Agile transformation. 
-    They will learn how to facilitate ART processes and execution, coach leaders, teams, and Scrum Masters in new 
-    processes and mindsets. They will also learn how to prepare, plan and execute a Program Increment (PI) planning 
-    event, the primarily enabler of alignment throughout all levels of a SAFe® organization.`,
-    price: 2000,
-    included: [
-      { description: "Attendee workbook" },
-      { description: "Preparation and eligibility to take the SAFe® 5 Release Train Engineer (RTE) exam" },
-      { description: "One year membership to the SAFe® Community Platform" },
-      { description: "Course certificate of completion" }
-    ],
-  };
-
   safeArchitects = {
     id: 7,
     title: "Remote-Certified",
@@ -235,22 +184,51 @@ export class UpcomingCoursesComponent implements OnInit {
       { description: "Course certificate of completion" },
     ],
   };
+  
+  leadingSafe2 = {
+    id: 8,
+    title: "Remote-Leading",
+    subtitle: " SAFe 5.0",
+    img: "../../assets/img/logos/leading safe badge.png",
+    learnText: `During this two-day course, attendees will 
+    gain the knowledge necessary to lead a Lean-Agile enterprise 
+    by leveraging the Scaled Agile Framework® (SAFe®), and its 
+    underlying principles derived from Lean, systems thinking, 
+    Agile development, product development flow, and DevOps. 
+    They will discuss the five competencies needed to become a Lean Enterprise. 
+    They will also learn and practice the skills for supporting 
+    and executing PI Planning events, and coordinating multiple 
+    Agile Release Trains (ARTs).`,
+    learnText2: `Attendees will gain an understanding of the Lean-Agile 
+    mindset, why it’s so effective in today’s adapt-or-die marketplace, 
+    and what it means to lead a Lean-Agile transformation. They’ll also 
+    learn how to build and support Agile teams and programs, empower a Lean 
+    Portfolio, build a Continuous Delivery Pipeline and DevOps culture, and 
+    coordinate large solutions. They will develop a skillset that’s in demand 
+    worldwide—and empower their enterprises to succeed in a disruptive 
+    marketplace—when they become a SAFe® 5 Agilist (SA).
 
+    Attending the class prepares individuals to take the exam and become a 
+    certified SAFe® Agilist (SA)`,
+    price: 900,
+    included: [
+      {
+        description: "Attendee workbook (digital workbook for remote classes)",
+      },
+      {
+        description:
+          "Preparation and eligibility to take the SAFe® 5 Agilist exam",
+      },
+      { description: "One year membership to the SAFe Community Platform" },
+      { description: "Course certificate of completion" },
+    ],
+  };
   courses = [
+
     {
-      courseInfo: this.leadingSafe,
-      date: "January 28 - January 29, 2021",
-      courseDate: "Jan 28 2021", 
-    },
-    {
-      courseInfo: this.safePopm,
-      date: "February 8 - February 11, 2021",
-      courseDate: "Feb 8 2021", 
-    },
-    {
-      courseInfo: this.releaseTrainEngineer,
-      date: "February 10 - February 12, 2021",
-      courseDate: "Feb 10 2021", 
+      courseInfo: this.leadingSafe2,
+      date: "February 11 - February 12, 2021",
+      courseDate: "Feb 11 2021", 
     },
     {
       courseInfo: this.scrumMaster,
